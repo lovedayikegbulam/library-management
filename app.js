@@ -8,7 +8,7 @@ const library = new Library();
 
 const book1 = new Book('JavaScript: The Good Parts', 'Douglas Crockford', '9780596517748');
 const book2 = new Book('Eloquent JavaScript', 'Marijn Haverbeke', '9781593275846');
-const book3 = new Book('You Don\'t Know JS', 'Kyle Simpson', '9781491904244');
+const book3 = new Book("You Don't Know JS', 'Kyle Simpson', '9781491904244");
 
 library.addNewBook(book1);
 library.addNewBook(book2);
@@ -27,3 +27,7 @@ library.borrowBook('user-123', '9780596517748');  // Should print 'Cannot borrow
 
 user1.returnBook('9780596517748');
 library.borrowBook('user-123', '9780596517748');  // Now it should succeed
+
+// Retrieve information about a book
+console.log(user1.getBookInfo(library, '9780596517748'));  // Should return the book info
+console.log(user1.getBookInfo(library, '1234567890'));      // Should return 'Book not found.'

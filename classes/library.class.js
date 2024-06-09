@@ -34,6 +34,15 @@ class Library {
     }
     return user.borrowBook(book);
   }
+
+  getBookInfo(ISBN) {
+    const book = this.books.find((b) => b.ISBN === ISBN);
+    if (book) {
+      return book.getInfo();
+    } else {
+      return "Book not found.";
+    }
+  }
 }
 
 export default Library;
