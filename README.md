@@ -48,3 +48,25 @@ user1.returnBook('9780596517748');
 // Retrieve book information
 console.log(user1.getBookInfo(library, '9780596517748'));
 console.log(user1.getBookInfo(library, '1234567890'));  // Book not found
+```
+
+### Installation and Setup
+ 1. Clone the repository:
+ ```
+git clone <repository_url>
+cd <repository_directory>
+```
+
+ 2. Install dependencies:
+ ```
+ npm install
+```
+
+ 3. Run the application:
+ ```
+ node app.js
+```
+
+### Future Enhancements
+
+This project is a basic implementation and can be extended with features like database persistence, user authentication, and a web interface.
